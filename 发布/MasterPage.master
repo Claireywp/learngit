@@ -1,0 +1,320 @@
+<%@ master language="C#" autoeventwireup="true" inherits="MasterPage, App_Web_zqsw0evp" %>
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+<title>吉林省微量元素科学研究会</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    
+    <style type="text/css"> 
+  #nav{width:140px;margin:10px; background:#FFFCE2} 
+  #nav h3{ cursor:pointer;height:28px; color:#000; font-size: 14px; line-height: 26px; font-weight: bold; align="center"; font-weight:normal; padding-left:8px; border-bottom:1px solid #c7d7e6; margin:0 15px;} 
+   #nav div a{display:block;line-height:26px;color:#000; font-size:12px;  border-bottom:1px solid #c7d7e6; margin:0 15px; padding-left:22px; text-decoration:none; background:#FFFCE2;} 
+     #nav div{display:none;}  
+       </style> 
+       
+   <script type="text/javascript">  
+    function changeCss(type) 
+    {  
+        if(type=='1')
+        {  
+             document.getElementById('a').className = 'navh02'; 
+             document.getElementById('b').className = 'navh01';
+             document.getElementById('d').style.display = 'none';     
+             document.getElementById('c').style.display = 'block';    
+        }   
+        if(type=='2')
+        {   
+            document.getElementById('a').className = 'navh01';   
+            document.getElementById('b').className = 'navh02';   
+            document.getElementById('c').style.display = 'none';    
+            document.getElementById('d').style.display = 'block';        
+        }    
+     }  
+     function $(id)
+     {
+        return document.getElementById(id)
+     } 
+     window.onload = function()
+     {  
+        $("nav").onclick = function(e)
+        {   
+            var src = e?e.target:event.srcElement;   
+            if(src.tagName == "H3")
+            {    if(src.className == 'navh02')
+                 {     
+                    src.className = 'navh01';    
+                 }
+                 else if(src.className == 'navh01')
+                 {        
+                    src.className = 'navh02';
+                 }     
+                 var next = src.nextElementSibling || src.nextSibling;     
+                 next.style.display = (next.style.display =="block")?"none":"block";    
+          }    
+      }  
+    }  
+    </script> 
+
+    
+    
+    
+<SCRIPT LANGUAGE="JavaScript">
+var timerID = null;
+var timerRunning = false;
+
+function stopclock (){
+if(timerRunning)
+clearTimeout(timerID);
+timerRunning = false;}
+
+//显示当前时间
+function showtime () {
+var now = new Date();
+var hours = now.getHours();
+var minutes = now.getMinutes();
+var seconds = now.getSeconds()
+var timeValue = " " + ((hours >12) ? hours -12 :hours)
+timeValue += ((minutes < 10) ? ":0" : ":") + minutes
+timeValue += ((seconds < 10) ? ":0" : ":") + seconds
+timeValue += (hours >= 12) ? " 下午 " : " 上午 "
+document.clock.face.value = timeValue;
+timerID = setTimeout("showtime()",1000);//设置超时,使时间动态显示
+timerRunning = true;}
+
+function startclock () {
+stopclock();
+showtime();}
+</SCRIPT>
+
+<style type ="text/css">
+p {text-indent:2em;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+
+<style type="text/css">
+body {
+	FONT-SIZE: 9pt
+
+}
+TD {
+	FONT-SIZE: 9pt
+}
+</style>
+
+<style type="text/css">
+body {
+	MARGIN: 0px
+}
+</style>
+<link href="#" type="text/css" rel="stylesheet"/>
+<meta content="MSHTML 6.00.3790.0" name="GENERATOR"/>
+<style type="text/css">
+<!--
+.style13 {
+	font-family: "隶书";
+	font-size: 14pt;
+	font-weight: bold;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+ 
+
+a:visited {
+	text-decoration:none;
+	color: #003300;
+}
+a:hover {
+	text-decoration: none;
+	
+}
+a:active {
+	text-decoration: none;
+	color: #0000FF;
+}
+.style50 {font-family: "隶书"}
+.style52 {
+	font-size: 18px;
+	line-height: 26px;
+	
+}
+ .mlength
+        {
+            display: block;
+            width: 100px;
+            overflow: hidden; 
+            white-space: nowrap;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+  
+.style55 {font-size: 14px}
+.style59 {font-size: 16px; font-family: "隶书"; }
+.style61 {font-size: 18px; font-family: "隶书"; }
+.style34 {
+	color: #006600;
+	font-family: "隶书";
+	font-size: 18px;
+}
+.style42 {	font-size: 18pt;
+	color: #003300;
+	font-family: "宋体";
+	font-weight: bold;
+}/*前台大标题*/
+.style76 {font-size: 14pt}
+.style91 {color: #003300}
+.style92 {
+	font-size: 24px;
+	font-weight: bold;
+}
+.STYLE93 {font-size: 14px; line-height: 26px; font-weight: bold; }
+.style100{font-weight: bold; font-size: 15px;font-family: "宋体";}/*后台标题*/
+.style101{font-size: 14px;font-family: "宋体";}/*后台文本*/
+.style102{color: #003300; font-size: 12pt;font-family: "宋体";font-weight: bold;}/*前台小标题*/
+-->
+</style>
+<style type="text/css">
+/* common styling */
+.menu {font-family: arial, sans-serif; width="140" height="37" valign="middle" position:relative;  font-size: 14px; line-height: 26px; font-weight: bold; align="center"; margin:6px 0;}
+.menu ul li a, .menu ul li a:visited {display:block; text-decoration:none; color:#000;width:140px; height:37px; text-align:center; color:#000;   line-height:26px; font-size:14px; overflow:hidden;}
+.menu ul {padding:0; margin:0;list-style-type: none; }
+.menu ul li {float:left; margin-right:1px; position:relative;}
+.menu ul li ul {display: none;}
+/* specific to non IE browsers */
+.menu ul li:hover a {color:#000; background:#FFFCE2;margin:0 2px;}/*一级划过颜色*/
+.menu ul li:hover ul {display:block; position:absolute; top:0; left:140px; width:140px;}/*二级聚二级边距*/
+.menu ul li:hover ul li a.hide {background:#6a3; color:#fff;}/* x三级x */
+.menu ul li:hover ul li:hover a.hide {background:#6fc; color:#000;}/*x三级x*/
+.menu ul li:hover ul li ul {display: none;}
+.menu ul li:hover ul li a {display:block; background:#FFFCE2; color:#000;}/*二级背景颜色*/
+.menu ul li:hover ul li a:hover {background:#FFF; color:#000;}/*二级划过颜色*/
+.menu ul li:hover ul li:hover ul {display:block; position:absolute; left:140px; top:0;}/*三级聚二级边距*/
+</style>
+
+
+
+
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_reloadPage(init) {  //reloads the window if Nav4 resized
+  if (init==true) with (navigator) {if ((appName=="Netscape")&&(parseInt(appVersion)==4)) {
+    document.MM_pgW=innerWidth; document.MM_pgH=innerHeight; onresize=MM_reloadPage; }}
+  else if (innerWidth!=document.MM_pgW || innerHeight!=document.MM_pgH) location.reload();
+}
+MM_reloadPage(true);
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_showHideLayers() { //v6.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) if ((obj=MM_findObj(args[i]))!=null) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+//-->
+</script>
+</head>
+<body>
+<form  runat="server">
+
+
+
+
+
+ <table height="77" cellspacing="0" cellpadding="0" width="1005" align="center" border="0">
+    <tr>
+      <td valign="bottom" width="220" height="70">
+      <div align="left">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="1005" height="150">
+          <param name="movie" value="images/bt3.swf"/>
+          <param name="quality" value="high"/>
+          <embed src="images/bt3.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1005" height="150"></embed>
+        </object>
+      </div></td>
+    </tr>
+</table>
+<table width="1005" height=36 border=0 align="center" cellPadding=0 cellSpacing=0 background=images/index_03.jpg>
+  <tr>
+      <td width="8%" style="height: 36px"><img height=36 alt="" src="images/index_02.jpg" width=60></td>
+      
+      <td width="91%" style="height: 36px">
+      
+        <table class=channel height=36 cellSpacing=0 cellPadding=0 width=794 align=left background=images/index_03.jpg border=0>
+        
+          <tr>
+            <td width=99 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px"><div align="center" class="style61">
+              <div align="center" class="style61"><a href="wlys_sy.aspx">首 页</a></div>
+            </div></td>
+            <td width=99 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px"><div align="center" class="style61">
+              <div align="center" class="style61"><a href="wlys_xhjj.aspx">学会简介</a></div>
+            </div></td>     
+		    <td width=99 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px" ><div align="center" class="style61">
+		      <div align="center" "style61"><a href="wlys_xhzc.aspx">学会章程</a></div>
+		    </div></td>
+		    <td width=99 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px"><div align="center" class="style61">
+		     <div align="center" "style61"><a href="wlys_zzgj_t.aspx">组织构架</a></div>
+		     </div></td>
+		    <td width=100 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px"><div align="center" class="style61">
+             <div align="center" "style61"><a href="wlys_fzjg_jc.aspx">分支机构</a></div>
+             </div></td>
+		    <td width=100 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px"> <div align="center" class="style61">
+              <div align="center" "style61"><a href="bk.aspx">学会通讯</a></div>
+              </div></td>
+		    <td width=98 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px"><div align="center" class="style61">
+		     <div align="center" "style61"><a href="wlys_xhfc_ryjltp.aspx">学会风采</a></div>
+		     </div></td>
+            <td width=99 align=middle vAlign=bottom background="images/index_05.jpg" style="height: 35px"><div align="center" class="style61">
+            <div align="center" "style61"><a href="wlys-xshd.aspx">学术活动</a></div>
+            </div></td>
+          </tr>
+        </table>
+      </td>
+      <td width="1%" style="height: 36px">　</td>
+  </tr>
+</table>
+    <table width="1003" border="0" align="center" >
+        <tr>
+            <td  style="vertical-align: top; height: 229px;">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" >
+        </asp:contentplaceholder>
+            </td>
+        </tr>
+    </table>
+    
+    <table cellSpacing=0 cellPadding=0 width=977 align=center border=0>
+    <tr>
+      <td width=12 style="height: 100px">　</td>
+      <td vAlign=top style="height: 100px">&nbsp;      </td>
+      <td vAlign=center width=12 style="height: 100px">　</td>
+      <td vAlign=top style="height: 100px"><div align="center"><br>
+        <img src="images/index_17.gif" alt="1" width="953" height="8">
+      </div>
+        <table class=top_userlogin cellSpacing=0 cellPadding=0 width=772 align=center border=0>
+    <tr>
+      <td width=51>
+</td>
+      <td>
+<div align=center><a href="wlys_xhjj.aspx" >关于我们|  </a><a href="wlys_sy_tztg_more.aspx">联系我们 |</a><span onClick="var strHref=window.location.href;this.style.behavior='url(#default#homepage)';this.setHomePage('http://wlys.jlmpc.cn');" style="CURSOR: hand; color: #003300;">设为首页</span>
+|<span style="CURSOR: hand ; color: #003300;" onClick="window.external.addFavorite('http:/wlys.jlmpc.cn','吉林省微量元素网')" title="吉林省微量元素网">添加收藏
+</span>|<a href ="wlys-htdl.aspx">后台管理</a>
+    <br>
+<br>
+</div></td>
+    </tr>
+  </table>
+  </form>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<%@ master language="C#" autoeventwireup="true" inherits="MasterPage0, App_Web_zqsw0evp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>微量元素后台管理</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<style type="text/css"> 
+  #nav{width:140px;margin:10px; background:#FFFCE2} 
+  #nav h3{ cursor:pointer;line-height:28px;height:28px; color:#000; font-size: 14px; line-height: 26px; font-weight: bold; align="center"; font-weight:normal; padding-left:8px; border-bottom:1px solid #c7d7e6; margin:0 15px;} 
+   #nav div a{display:block;line-height:28px;color:#000; font-size:12px;  border-bottom:1px solid #c7d7e6; margin:0 15px; padding-left:22px; text-decoration:none; background:#FFFCE2;} 
+     #nav div{display:none;}  
+       </style> 
+       
+   <script type="text/javascript">  
+    function changeCss(type) 
+    {  
+        if(type=='1')
+        {  
+             document.getElementById('a').className = 'navh02'; 
+             document.getElementById('b').className = 'navh01';
+             document.getElementById('d').style.display = 'none';     
+             document.getElementById('c').style.display = 'block';    
+        }   
+        if(type=='2')
+        {   
+            document.getElementById('a').className = 'navh01';   
+            document.getElementById('b').className = 'navh02';   
+            document.getElementById('c').style.display = 'none';    
+            document.getElementById('d').style.display = 'block';        
+        }    
+     }  
+     function $(id)
+     {
+        return document.getElementById(id)
+     } 
+     window.onload = function()
+     {  
+        $("nav").onclick = function(e)
+        {   
+            var src = e?e.target:event.srcElement;   
+            if(src.tagName == "H3")
+            {    if(src.className == 'navh02')
+                 {     
+                    src.className = 'navh01';    
+                 }
+                 else if(src.className == 'navh01')
+                 {        
+                    src.className = 'navh02';
+                 }     
+                 var next = src.nextElementSibling || src.nextSibling;     
+                 next.style.display = (next.style.display =="block")?"none":"block";    
+          }    
+      }  
+    }  
+    </script> 
+<style type ="text/css">
+p {text-indent:2em;}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+
+<style type="text/css">
+body {
+	FONT-SIZE: 9pt
+
+}
+TD {
+	FONT-SIZE: 9pt
+}
+</style>
+
+<style type="text/css">
+body {
+	MARGIN: 0px
+}
+</style>
+<link href="#" type="text/css" rel="stylesheet"/>
+<meta content="MSHTML 6.00.3790.0" name="GENERATOR"/>
+<style type="text/css">
+<!--
+.style13 {
+	font-family: "隶书";
+	font-size: 14pt;
+	font-weight: bold;
+}
+a:link {
+	color: #000000;
+	text-decoration: none;
+}
+ 
+
+a:visited {
+	text-decoration:none;
+	color: #003300;
+}
+a:hover {
+	text-decoration: none;
+	
+}
+a:active {
+	text-decoration: none;
+	color: #0000FF;
+}
+.style50 {font-family: "隶书"}
+.style52 {
+	font-size: 18px;
+	line-height: 26px;
+}
+.style55 {font-size: 14px}
+.style59 {font-size: 16px; font-family: "隶书"; }
+.style61 {font-size: 18px; font-family: "隶书"; }
+.style34 {
+	color: #006600;
+	font-family: "隶书";
+	font-size: 18px;
+}
+.style42 {	font-size: 18pt;
+	color: #003300;
+	font-family: "宋体";
+	font-weight: bold;
+}/*前台大标题*/
+.style76 {font-size: 14pt}
+.style91 {color: #003300}
+.style92 {
+	font-size: 24px;
+	font-weight: bold;
+}
+.STYLE93 {font-size: 14px; line-height: 26px; font-weight: bold; }
+.style100{font-weight: bold; font-size: 15px;font-family: "宋体";}/*后台标题*/
+.style101{font-size: 14px;font-family: "宋体";}/*后台文本*/
+.style102{color: #003300; font-size: 12pt;font-family: "宋体";font-weight: bold;}/*前台小标题*/
+-->
+</style>
+</head>
+<body>
+    <form id="form1" runat="server">
+ <table height="77" cellspacing="0" cellpadding="0" width="1005" align="center" border="0">
+    <tr>
+      <td valign="bottom" width="220" height="70">
+      <div align="left">
+        <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="1005" height="150">
+          <param name="movie" value="images/bt3.swf"/>
+          <param name="quality" value="high"/>
+          <embed src="images/bt3.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="1005" height="150"></embed>
+        </object>
+      </div></td>
+    </tr>
+</table>
+<table width="1005" height=36 border=0 align="center" cellPadding=0 cellSpacing=0 background=images/index_03.jpg>
+  <tr>
+      <td width="8%" style="height: 36px"><img height=36 alt="" src="images/index_02.jpg" width=60></td>
+      
+      <td width="91%" style="height: 36px">
+      
+        <table class=channel height=36 cellSpacing=0 cellPadding=0 width=794 align=left background=images/index_03.jpg border=0>
+        
+          <tr>
+            <td width=99 align=middle vAlign=bottom background="images/index_05.jpg"><div align="center" class="style61">
+              <div align="center" class="style61"><a href="wlys_sy.aspx">首 页</a></div>
+            </div></td>
+            <td width=99 align=middle vAlign=bottom background="images/index_05.jpg"><div align="center" class="style61">
+              <div align="center">学会简介</div>
+            </div></td>
+             
+            
+		    <td width=100 align=middle vAlign=bottom background="images/index_05.jpg" ><div align="center" class="style61">
+		      <div align="center">学会章程</div>
+		    </div></td>
+		    <td width=99 align=middle vAlign=bottom background="images/index_05.jpg"><div align="center" class="style61">组织构架</div></td>
+		    <td width=100 align=middle vAlign=bottom background="images/index_05.jpg"> <div align="center" class="style61">分支构架</div></td>
+		    <td width=100 align=middle vAlign=bottom background="images/index_05.jpg"><div align="center" class="style61">学会通讯</div></td>
+		    <td width=98 align=middle vAlign=bottom background="images/index_05.jpg" onMouseOver="MM_showHideLayers('Layer3','','show')"><div align="center"><span class="style61">学会风采</span></div></td>
+            <td width=99 align=middle vAlign=bottom background="images/index_05.jpg" class=channel style52><div align="center"><span class="style61">学术活动</span></div></td>
+          </tr>
+        </table>
+      </td>
+      <td width="1%" style="height: 36px">　</td>
+  </tr>
+</table>
+    <table cellspacing="0" cellpadding="0" width="1004" align="center" border="0">
+        <tr>
+            <td rowspan="3" valign="top" style="width: 12px">
+            </td>
+            <td width="140" valign="middle" background="images/index_11.jpg" style="height: 31px"><div align="center" class="STYLE93" ></div>
+            </td>
+            <td rowspan="3" width="25" valign=top>
+            </td>
+             <td  style="vertical-align: top; height: 31px" colspan="3" width="812" valign="middle" > 
+             <asp:contentplaceholder id="ContentPlaceHolder1" runat="server" >
+        </asp:contentplaceholder>
+           </td>
+        </tr>
+        <tr>
+            <td height="478" valign="top" background="images/index_27.gif" class="style52">
+           <div id="nav">  
+           <h3 class="navh01"  id="H3_7"><a href="wlys_mmgl.aspx">密码管理</a></h3>
+           <div></div>
+           <h3 class="navh01"  id="H3_8"></h3>
+           <div></div>
+    <h3 class="navh01" id="a">首页</h3> 
+    <div >  
+      <a href="wlys_sy_tztg_ht.aspx">通知通告</a> 
+      <a href="wlys_sy_xhxw_ht.aspx">学会新闻</a> 
+      <a href="wlys_sy_cwlsh_ht.aspx">常务理事会</a>
+      <a href="wlys_sy_kpzs_ht.aspx">科普知识</a> 
+      <a href="wlys_sy_xhfc_ht.aspx">学会风采</a>  
+      </div> 
+     <h3 class="navh01"  id="b"><a href="wlys_xhjj_ht.aspx">学会简介</a></h3>
+     <div></div>
+     <h3 class="navh01"  id="H3_1"><a href="wlys_xhzc_ht.aspx">学会章程</a></h3> 
+     <div></div>
+     <h3 class="navh01"  id="H3_2"><a href="wlys_zzgj_ht.aspx">组织构架</a></h3> 
+     <div>  
+     </div> 
+     <h3 class="navh01"  id="H3_3">分支机构</h3> 
+     <div>  
+    <a href="wlys_fzjg_jc_ht.aspx">检测专业委员会</a> 
+     <a href="wlys_fzjg_yx_ht.aspx">医学专业委员会</a> 
+     <a href="wlys_fzjg_yaox_ht.aspx">药学专业委员会</a> 
+     <a href="wlys_fzjg_nm_ht.aspx">农牧专业委员会</a> 
+     <a href="wlys_fzjg_fy_ht.aspx">妇幼专业委员会</a> 
+     </div> 
+     <h3 class="navh01"  id="H3_4"><a href="wlys_xhtx_ht.aspx">学会通讯</a></h3> 
+     <div>  
+     </div> 
+     <h3 class="navh01"  id="H3_5">学会风采</h3> 
+     <div>  
+     <a href="wlys_xhfc_ryjlbt_ht.aspx">荣誉奖励标题</a> 
+     <a href="wlys_xhfc_ryjltp_ht.aspx">荣誉奖励图片</a> 
+     <a href="wlys_xhfc_tpbdbt_ht.aspx">图片报道标题</a> 
+     <a href="wlys_xhfc_tpbdtp_ht.aspx">图片报道图片</a> 
+     </div> 
+     <h3 class="navh01"  id="H3_6"><a href="wlys-xshdht.aspx">学术活动</a></h3> 
+     <div>      
+     </div> 
+   </div>  
+            </td>
+            <td colspan="3" rowspan="2">
+          <table width="818" height=100% border="0" bgcolor="#FFFCE2">
+            <tr>
+              <td height="603" align="center" valign="top">
+                  <br />
+                    <asp:contentplaceholder id="ContentPlaceHolder2" runat="server" >
+        </asp:contentplaceholder>
+                  </td>
+            </tr>
+        </table>
+            </td>
+        </tr>
+        <tr>
+        </tr>
+    </table>
+    <table cellSpacing=0 cellPadding=0 width=977 align=center border=0>
+    <tr>
+      <td width=12 style="height: 100px">　</td>
+      <td vAlign=top style="height: 100px">&nbsp;      </td>
+      <td vAlign=center width=12 style="height: 100px">　</td>
+      <td vAlign=top style="height: 100px"><div align="center"><br>
+        <img src="images/index_17.gif" alt="1" width="953" height="8">
+      </div>
+        <table class=top_userlogin cellSpacing=0 cellPadding=0 width=772 align=center border=0>
+    <tr>
+      <td width=51>
+</td>
+      <td>
+<div align=center><a href="wlys_xhjj.aspx" >关于我们|  </a><a href="wlys_sy_tztg_more.aspx">联系我们 |</a><span onClick="var strHref=window.location.href;this.style.behavior='url(#default#homepage)';this.setHomePage('http://wlys.jlmpc.cn');" style="CURSOR: hand; color: #003300;">设为首页</span>
+|<span style="CURSOR: hand ; color: #003300;" onClick="window.external.addFavorite('http:/wlys.jlmpc.cn','吉林省微量元素网')" title="吉林省微量元素网">添加收藏
+</span>|<a href ="wlys-htdl.aspx">后台管理</a>
+    <br>
+<br>
+</div></td>
+    </tr>
+  </table>
+    </form>
+</body>
+</html>
